@@ -42,7 +42,8 @@ if (isset($_GET['Del'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>TODOs with PHP</title>
 </head>
@@ -51,6 +52,8 @@ if (isset($_GET['Del'])) {
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-xxl">
             <span class="navbar-brand mb-0 h-100" style="font-size: 30px;">TODOs List Using PHP</span>
+            <a href="https://github.com/jeet404" class="nav-link text-dark p-1 rounded btn btn-success">Developed by
+                Jeet404</a>
         </div>
     </nav>
 
@@ -69,7 +72,9 @@ if (isset($_GET['Del'])) {
                 <input name="give" class="btn btn-primary" type="submit" value="Add">
             </div>
             <div class="mb-1">
-                <span style="color: red;"><?php echo $msg; ?></span>
+                <span style="color: red;">
+                    <?php echo $msg; ?>
+                </span>
             </div>
         </form>
 
@@ -91,14 +96,21 @@ if (isset($_GET['Del'])) {
                     while ($row = mysqli_fetch_assoc($take)) {
                         $UserId = $row['id'];
                     ?>
-                        <tr>
-                            <td scope="row"><?php echo $row['id']; ?></td>
-                            <td><?php echo $row['title']; ?></td>
-                            <td><?php echo $row['description']; ?></td>
-                            <td>
-                                <a href="index.php?Del=<?php echo $UserId; ?>"><button class="btn btn-primary">Delete</button></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td scope="row">
+                            <?php echo $row['id']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['title']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['description']; ?>
+                        </td>
+                        <td>
+                            <a href="index.php?Del=<?php echo $UserId; ?>"><button
+                                    class="btn btn-primary">Delete</button></a>
+                        </td>
+                    </tr>
                     <?php } ?>
                 </tbody>
             </table>
@@ -110,7 +122,9 @@ if (isset($_GET['Del'])) {
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
